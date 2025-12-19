@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="number" id="num1">
+    <select id="operation">
+        <option value="add">+</option>
+        <option value="subtract">-</option>
+        <option value="multiply">*</option>
+        <option value="divide">/</option>
+        <option value="percent">%</option>
+
+    </select>
+    <input type="number" id="num2">
+    <button id="myButton">Try me!</button>
+    <script>
+        const button = document.getElementById('myButton');
+        const num1 = document.getElementById('num1');
+        const num2 = document.getElementById('num2');
+        const operation = document.getElementById('operation');
+        button.addEventListener('click', () => {
+            const n1 = Number(num1.value);
+            const n2 = Number(num2.value);
+            const op = operation.value;
+            res = 0;
+            if (n1 < 0 || n2 < 0) {
+                window.alert("Error :(");
+                console.log("Error :(");
+            }
+            else if (op == "divide" && n2 == 0) {
+                window.alert("It's over 9000!");
+                console.log("It's over 9000!");
+            }
+            else {
+                if (op == "add")
+                    res = n1 + n2;
+                else if (op == "subtract")
+                    res = n1 - n2;
+                else if (op == "multiply")
+                    res = n1 * n2;
+                else if (op == "divide")
+                    res = n1 / n2;
+                else if (op == "percent")
+                    res = (n2 / 100) * n1;
+                window.alert(res);
+                console.log(res);
+            }
+        });
+        let use = setInterval(() => window.alert("Please, use me..."), 30000);
+        
+
+
+    </script>
+</body>
+
+</html>

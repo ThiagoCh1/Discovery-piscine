@@ -1,0 +1,32 @@
+
+body {
+    margin: 0;
+}
+.container {
+    display: flex;
+    width: 100%;
+    height: 20vh;
+}
+
+.box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.purple {
+    background-color: purple;
+    color: white;
+}
+
+.cyan {
+    background-color: cyan;
+    color: black;
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+}

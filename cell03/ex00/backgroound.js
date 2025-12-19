@@ -1,0 +1,10 @@
+const button = document.getElementById('myButton');
+const body = document.body;
+
+button.addEventListener('click', () => {
+  const r = Math.floor(Math.random() * 256);
+  const g = Math.floor(Math.random() * 256);
+  const b = Math.floor(Math.random() * 256);
+  
+  body.style.backgroundColor = `rgb(${r},${g},${b})`;
+});

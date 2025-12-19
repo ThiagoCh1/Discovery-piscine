@@ -1,0 +1,56 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.first {
+    min-height: 100vh;
+    background-image: url("https://imgix.ranker.com/user_node_img/50063/1001245650/original/he-once-took-mushrooms-with-his-cat-photo-u1?auto=format&q=60&fit=crop&fm=pjpg&dpr=2&w=500");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first p {
+    text-align: center;
+    color: aqua;
+    transform: translateY(-10%);
+}
+
+.second {
+    min-height: 50vh;
+    background-color: black;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.second p {
+    color: blueviolet;
+    margin: 0;
+}
+
+.third
+{
+    min-height: 100vh;
+    background-image: url("https://wl-brightside.cf.tsp.li/resize/728x/webp/a2d/aaa/4479cc5ddd969d9dfbeb73bc6e.jpg.webp");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.third p 
+{
+    color: orangered;
+}

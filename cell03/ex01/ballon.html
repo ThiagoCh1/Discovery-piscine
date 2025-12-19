@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .ballon {
+            background-color: red;
+            width: 200px;
+            height: 200px;
+            border-radius: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ballon" id="ball">
+
+    </div>
+    <script>
+        const ball = document.getElementById('ball');
+        ball.style.backgroundColor = "red";
+
+        ball.addEventListener('click', () => {
+            const currentwidth = ball.offsetWidth;
+            const currentheight = ball.offsetHeight;
+            if (currentwidth == 420) {
+                ball.style.width = 200 + "px";
+                ball.style.height = 200 + "px";
+
+            }
+            else {
+                ball.style.width = currentwidth + 10 + "px";
+                ball.style.height = currentheight + 10 + "px";
+            }
+            if (ball.style.backgroundColor == "red")
+                ball.style.backgroundColor = "green";
+            else if (ball.style.backgroundColor == "green")
+                ball.style.backgroundColor = "blue";
+            else
+                ball.style.backgroundColor = "red";
+        });
+        ball.addEventListener('mouseleave', () => {
+            const currentwidth = ball.offsetWidth;
+            const currentheight = ball.offsetHeight;
+            if (currentwidth > 200) {
+                ball.style.width = currentwidth - 5 + "px";
+                ball.style.height = currentheight - 5 + "px";
+                if (ball.style.backgroundColor == "blue")
+                    ball.style.backgroundColor = "green";
+                else if (ball.style.backgroundColor == "green")
+                    ball.style.backgroundColor = "red";
+                else
+                    ball.style.backgroundColor = "blue";
+            }
+        });
+    </script>
+</body>
+
+</html>
